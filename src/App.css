@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    height: 100vh;
+}
+/* .main {
+    height: 80%;
+    width: 100%;
+    margin: 4px;
+    border: 2px solid orangered;
+} */
+
+.main {
+    width: 100%; /* Full width */
+    height: 80vh; /* Set a fixed height */
+    background-color: #f5f5f5; /* Light background color */
+    padding: 20px; /* Padding inside the chat box */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll; /* Enable vertical scrolling */
+    scrollbar-width: none;
+    gap: 10px; /* Space between messages */
+}
+
+/* Webkit browsers: Chrome, Safari */
+.main::-webkit-scrollbar {
+    display: none; /* Hides the scrollbar */
+}
+.red-message {
+    background-color: #ffcccc; /* Light red */
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 20px;
+    color: #333;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.yellow-message {
+    background-color: #fffacd; /* Light yellow */
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 20px;
+    color: #333;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.text-area {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+}
+.text-input {
+    width: 70%;
+    padding: 10px 20px;
+    font-size: large;
+}
+.send-btn {
+    width: 30%;
+    height: 50px;
+    background: lime;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+    /* Styles for tablets and smaller screens */
+    .container {
+        width: 90%; /* Adjust width to fit phone screens */
+        height: 100vh; /* Height based on viewport */
+        padding: 10px;
+    }
+
+    .main p {
+        font-size: 16px; /* Slightly smaller font on phones */
+        padding: 8px;
+    }
+}
