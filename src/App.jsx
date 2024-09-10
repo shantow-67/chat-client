@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import io from "socket.io-client";
 import "./App.css";
 
-const socket = io("http://localhost:5000"); // Connect to the backend
+const socket = io("https://chat-server-uk1i.onrender.com"); // Connect to the backend
 
 function App() {
     const [message, setMessage] = useState("");
